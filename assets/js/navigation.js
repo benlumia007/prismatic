@@ -9,11 +9,11 @@ var __webpack_exports__ = {};
  * Primary JavaScript file. Any includes or anything imported should be filtered through this file
  * and eventually saved back into the `/assets/js/app.js` file.
  *
- * @package   Creativity
+ * @package   prismatic
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright 2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://luthemes.com/portfolio/creativity
+ * @link      https://luthemes.com/portfolio/prismatic
  */
 
 /**
@@ -37,7 +37,7 @@ var __webpack_exports__ = {};
   menu = container.getElementsByTagName('ul')[0];
   screenreadertext = document.createElement('span');
   screenreadertext.classList.add('screen-reader-text');
-  screenreadertext.textContent = creativityScreenReaderText.expandMain;
+  screenreadertext.textContent = prismaticScreenReaderText.expandMain;
   button.appendChild(screenreadertext);
   parentLink = container.querySelectorAll('.menu-item-has-children, .page_item_has_children');
   for (i = 0, len = parentLink.length; i < len; i++) {
@@ -48,7 +48,7 @@ var __webpack_exports__ = {};
     icon.classList.add('fontawesome', 'arrow');
     icon.setAttribute('aria-hidden', 'true');
     screenreadertext.classList.add('screen-reader-text');
-    screenreadertext.textContent = creativityScreenReaderText.expandChild;
+    screenreadertext.textContent = prismaticScreenReaderText.expandChild;
     parentLink[i].insertBefore(dropdown, submenu);
     dropdown.classList.add('dropdown-toggle');
     dropdown.setAttribute('aria-expanded', 'false');
@@ -62,12 +62,12 @@ var __webpack_exports__ = {};
         parentLink.className = parentLink.className.replace(' toggled-on', '');
         this.setAttribute('aria-expanded', 'false');
         submenu.setAttribute('aria-expanded', 'false');
-        screenreadertext.textContent = creativityScreenReaderText.expandChild;
+        screenreadertext.textContent = prismaticScreenReaderText.expandChild;
       } else {
         parentLink.className += ' toggled-on';
         this.setAttribute('aria-expanded', 'true');
         submenu.setAttribute('aria-expanded', 'true');
-        screenreadertext.textContent = creativityScreenReaderText.collapseChild;
+        screenreadertext.textContent = prismaticScreenReaderText.collapseChild;
       }
     };
   }
@@ -82,12 +82,12 @@ var __webpack_exports__ = {};
     if (-1 !== container.className.indexOf('toggled')) {
       container.className = container.className.replace(' toggled', '');
       button.setAttribute('aria-expanded', 'false');
-      screenreadertext.textContent = creativityScreenReaderText.expandMain;
+      screenreadertext.textContent = prismaticScreenReaderText.expandMain;
       menu.setAttribute('aria-expanded', 'false');
     } else {
       container.className += ' toggled';
       button.setAttribute('aria-expanded', 'true');
-      screenreadertext.textContent = creativityScreenReaderText.collapseMain;
+      screenreadertext.textContent = prismaticScreenReaderText.collapseMain;
       menu.setAttribute('aria-expanded', 'true');
     }
   };

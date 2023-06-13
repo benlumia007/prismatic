@@ -4,11 +4,11 @@
  * Primary JavaScript file. Any includes or anything imported should be filtered through this file
  * and eventually saved back into the `/assets/js/app.js` file.
  *
- * @package   Creativity
+ * @package   prismatic
  * @author    Benjamin Lu <benlumia007@gmail.com>
  * @copyright 2023. Benjamin Lu
  * @license   https://www.gnu.org/licenses/gpl-2.0.html
- * @link      https://luthemes.com/portfolio/creativity
+ * @link      https://luthemes.com/portfolio/prismatic
  */
 
 /**
@@ -36,7 +36,7 @@
 
 	screenreadertext = document.createElement( 'span' );
 	screenreadertext.classList.add( 'screen-reader-text' );
-	screenreadertext.textContent = creativityScreenReaderText.expandMain;
+	screenreadertext.textContent = prismaticScreenReaderText.expandMain;
 	button.appendChild( screenreadertext );
 
 	parentLink = container.querySelectorAll( '.menu-item-has-children, .page_item_has_children' );
@@ -51,7 +51,7 @@
 		icon.setAttribute( 'aria-hidden', 'true' );
 
 		screenreadertext.classList.add( 'screen-reader-text' );
-		screenreadertext.textContent = creativityScreenReaderText.expandChild;
+		screenreadertext.textContent = prismaticScreenReaderText.expandChild;
 
 		parentLink[i].insertBefore( dropdown, submenu );
 		dropdown.classList.add( 'dropdown-toggle' );
@@ -68,12 +68,12 @@
 				parentLink.className = parentLink.className.replace( ' toggled-on', '' );
 				this.setAttribute( 'aria-expanded', 'false' );
 				submenu.setAttribute ( 'aria-expanded', 'false');
-				screenreadertext.textContent = creativityScreenReaderText.expandChild;
+				screenreadertext.textContent = prismaticScreenReaderText.expandChild;
 			} else {
 				parentLink.className += ' toggled-on';
 				this.setAttribute( 'aria-expanded', 'true' );
 				submenu.setAttribute ( 'aria-expanded', 'true');
-				screenreadertext.textContent = creativityScreenReaderText.collapseChild;
+				screenreadertext.textContent = prismaticScreenReaderText.collapseChild;
 			}
 		};
 	}
@@ -89,12 +89,12 @@
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
-			screenreadertext.textContent = creativityScreenReaderText.expandMain;
+			screenreadertext.textContent = prismaticScreenReaderText.expandMain;
 			menu.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
-			screenreadertext.textContent = creativityScreenReaderText.collapseMain;
+			screenreadertext.textContent = prismaticScreenReaderText.collapseMain;
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
 	};

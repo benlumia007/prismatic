@@ -23,17 +23,22 @@ let exportPath = 'prismatic';
 // Theme root-level files to include.
 let files = [
 	'functions.php',
+	'footer.php',
+	'header.php',
 	'index.php',
+	'page.php',
 	'readme.txt',
 	'screenshot.png',
+	'sidebar.php',
+	'single.php',
 	'style.css'
 ];
 
 // Folders to include.
 let folders = [
-	'app',
-	'public',
-	'vendor'
+	'assets',
+	'inc',
+	'template-parts',
 ];
 
 // Delete the previous export to start clean.

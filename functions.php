@@ -46,6 +46,8 @@ function prismatic_scripts() {
 	wp_enqueue_style( 'prismatic-open-sans', get_parent_theme_file_uri( 'assets/fonts/open-sans/open-sans.css' ) );
 	wp_enqueue_style( 'prismatic-crimson',   get_parent_theme_file_uri( 'assets/fonts/crimson/crimson.css' ) );
 
+	wp_enqueue_script( 'creativity-app', prismatic_asset( 'js/app.js' ), [ 'jquery' ], null, true );
+
 	// Enqueue Navigation.
 	wp_enqueue_script( 'prismatic-navigation', prismatic_asset( 'js/navigation.js' ), null, null, true );
 	wp_localize_script( 'prismatic-navigation', 'prismaticScreenReaderText', [

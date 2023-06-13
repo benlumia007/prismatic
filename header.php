@@ -31,27 +31,23 @@
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<p class="site-description"><?php echo get_bloginfo( 'description' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			</div><!-- .site-branding -->
-
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'prismatic' ); ?></button>
-				<?php
-				if ( has_nav_menu( 'primary' ) ) { ?>
-					<nav id="primary" class="primary-menu">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'creativity' ); ?></button>
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'primary',
-								'container'      => '',
-								'menu_id'        => 'primary-menu',
-								'menu_class'     => 'menu-items',
-								'depth'          => 2
-							)
-						);
-						?>
-					</nav>
-				<?php }
-				?>
-			</nav><!-- #site-navigation -->
+			<?php
+			if ( has_nav_menu( 'primary' ) ) { ?>
+				<nav id="primary" class="primary-menu">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'creativity' ); ?></button>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'primary',
+							'container'      => '',
+							'menu_id'        => 'primary-menu',
+							'menu_class'     => 'menu-items',
+							'depth'          => 2
+						)
+					);
+					?>
+				</nav>
+			<?php }
+			?>
 		</div><!-- #branding-navigation -->
 	</header><!-- #masthead -->

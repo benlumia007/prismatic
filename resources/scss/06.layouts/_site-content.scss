@@ -1,4 +1,41 @@
-.site-content {
-	margin: 1.125rem auto;
-	max-width: 73.125rem;
+@media screen and ( max-width: 480px ) {
+	.site-content {
+		margin: 1.125rem;
+		max-width: 29.5rem;
+	}
+}
+
+@media screen and ( min-width: 481px ) and ( max-width: 600px ) {
+	.site-content {
+		margin: 1.125rem;
+		max-width: 36.375rem;
+	}
+}
+
+@media screen and ( min-width: 601px ) and ( max-width: 768px ) {
+	.site-content {
+		margin: 1.125rem;
+		max-width: 46.875rem;
+	}
+}
+
+@media screen and ( min-width: 769px ) and ( max-width: 1024px ) {
+	.site-content {
+		margin: 1.125rem;
+		max-width: 62.875rem;
+	}
+}
+
+@media screen and ( min-width: 1025px ) and ( max-width: 1170px ) {
+	.site-content {
+		margin: 1.125rem;
+		max-width: 72rem;
+	}
+}
+
+@media screen and ( min-width: 1171px ) {
+	.site-content {
+		margin: 1.125rem auto;
+		max-width: 1171px;
+	}
 }
