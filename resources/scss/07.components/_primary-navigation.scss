@@ -20,7 +20,7 @@
 				width: max-content;
 
 				&:hover {
-					color: color( white );
+					color: #00A5E3;
 					text-decoration: underline;
 					text-decoration-thickness: 2px;
 					text-underline-offset: 4px;
@@ -35,7 +35,7 @@
 								border: solid white;
 								border-width: 0 0.25rem 0.25rem 0;
 								transform: rotate( 45deg );
-								padding: 0.25rem;
+								padding: 0.20rem;
 								margin-left: 0.6rem;
 							}
 						}
@@ -85,7 +85,7 @@
 				}
 
 				.sub-menu {
-					background: color( black );
+					background: #0B5E79;
 					left: 0;
 					list-style-type: none;
 					margin: 0.7rem 0;
@@ -99,6 +99,7 @@
 					.menu-item {
 						margin: 0 0 0.5rem 0;
 						padding: 0.5rem;
+						width: 200px;
 
 						a {
 							color: #9AC3CE;

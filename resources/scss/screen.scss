@@ -71,7 +71,8 @@
 // These are the base styles that other styles will build upon.
 
 // @import '06.layouts/site';
-@import '06.layouts/site-main';
+@import '06.layouts/site-content';
+@import '06.layouts/left-sidebar';
 
 // -----------------------------------------------------------------------------
 // Import component styles.
@@ -83,6 +84,9 @@
 
 @import '07.components/site-header';
 @import '07.components/primary-navigation';
+@import '07.components/site-main';
+@import '07.components/widget';
+@import '07.components/site-footer';
 
 // -----------------------------------------------------------------------------
 // Import utility styles.

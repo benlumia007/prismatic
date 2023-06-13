@@ -1,0 +1,35 @@
+.site-main {
+
+	.page,
+	.post {
+		background: #ffffff;
+		border: 0.063rem dotted #5394A8;
+		border-bottom: 0.063rem solid #5394A8;
+		line-height: 1.8rem;
+		margin-top: 1.125rem;
+		padding: 1.125rem;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		.entry-header {
+
+			.entry-title {
+				margin-top: 0;
+				margin-bottom: 1rem;
+				padding: 0;
+
+				a {
+					color: #000000;
+					text-decoration: none;
+
+					&:hover,
+					&:focus {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
