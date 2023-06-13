@@ -1,0 +1,27 @@
+{
+	"name": "prismatic",
+	"description": "",
+	"version": "1.0.0",
+	"author": "Benjamin Lu",
+	"license": "GPL-2.0+",
+	"homepage": "https://luthemes.com/portfolio/creativity",
+	"main": "resources/js/app.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/luthemes/creativity.git"
+	},
+	"bugs": {
+		"url": "https://github.com/luthemes/creativity/issues"
+	},
+	"scripts": {
+		"build": "npm run prod && npm run export",
+		"watch": "mix watch",
+		"prod": "mix --production",
+		"export": "mix --mix-config=webpack.mix.export.js"
+	},
+	"devDependencies": {
+		"laravel-mix": "^6.0.49",
+		"sass": "^1.62.1",
+		"sass-loader": "^13.2.2"
+	}
+}

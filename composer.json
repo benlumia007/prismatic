@@ -1,0 +1,28 @@
+{
+	"name": "benlumia007/prismatic",
+	"type": "classicpress-theme",
+	"description": "",
+	"keywords": [ "classicpress", "theme" ],
+	"homepage": "https://benjlu.com",
+	"authors": [
+		{
+			"name": "Benjamin Lu",
+			"email": "benlumia007@gmail.com",
+			"homepage": "https://benjlu.com"
+		}
+	],
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"wptrt/wpthemereview": "*",
+		"php-parallel-lint/php-parallel-lint": "*"
+	},
+	"scripts": {
+		"lint:cpcs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs . -n",
+		"lint:php": "@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}

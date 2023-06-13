@@ -1,0 +1,40 @@
+.site-header {
+	background: #0B5E79;
+	padding: 0.5rem;
+
+	.branding-navigation {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1.125rem;
+		margin: 0 auto;
+		max-width: 73.125rem;
+
+		.site-branding {
+
+			.site-title {
+				float: left;
+				font-family: font-family( heading );
+				font-size: 2.25rem;
+				margin: 0;
+				padding: 0;
+
+				a {
+					color: #9AC3CE;
+					text-decoration: none;
+
+					&:hover,
+					&:focus {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.site-description {
+				color: #7ac5db;
+				float: left;
+				font-size: 1.25rem;
+				padding: 0.875rem;
+			}
+		}
+	}
+}

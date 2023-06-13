@@ -1,0 +1,10 @@
+.site-content,
+.content-area,
+.entry-content {
+	&:before,
+	&:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+}
