@@ -178,14 +178,14 @@ h6 {
   padding: 0;
 }
 .site-header .branding-navigation .site-branding .site-title a {
-  color: #9AC3CE;
+  color: #ffffff;
   text-decoration: none;
 }
 .site-header .branding-navigation .site-branding .site-title a:hover, .site-header .branding-navigation .site-branding .site-title a:focus {
   text-decoration: underline;
 }
 .site-header .branding-navigation .site-branding .site-description {
-  color: #7ac5db;
+  color: #ffffff;
   float: left;
   font-size: 1.25rem;
   padding: 0.875rem;
@@ -317,7 +317,7 @@ h6 {
     width: max-content;
   }
   .primary-menu .menu-items .menu-item:hover {
-    color: #00A5E3;
+    color: #ffffff;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
@@ -335,21 +335,21 @@ h6 {
     display: none;
   }
   .primary-menu .menu-items .menu-item.current-menu-item a {
-    color: #9AC3CE;
+    color: #ffffff;
     padding: 0.5rem 1rem;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
   }
   .primary-menu .menu-items .menu-item.current-menu-item .sub-menu .menu-item a {
-    color: #9AC3CE;
+    color: #ffffff;
     padding: 0.5rem 1rem;
     text-decoration: none;
     text-decoration-thickness: 0;
     text-underline-offset: 0;
   }
   .primary-menu .menu-items .menu-item a {
-    color: #9AC3CE;
+    color: #ffffff;
     padding: 0.5rem 1rem;
     text-decoration: none;
   }
@@ -374,7 +374,7 @@ h6 {
     width: 200px;
   }
   .primary-menu .menu-items .menu-item .sub-menu .menu-item a {
-    color: #9AC3CE;
+    color: #ffffff;
   }
   .primary-menu .menu-items .menu-item .sub-menu .menu-item:last-child {
     margin: 0;
@@ -650,11 +650,12 @@ h6 {
 }
 .site-footer {
   background: #0B5E79;
+  color: #ffffff;
   padding: 1.125rem;
   text-align: center;
 }
 .site-footer .site-info a {
-  color: #00A5E3;
+  color: #ffffff;
 }
 
 .screen-reader-text {

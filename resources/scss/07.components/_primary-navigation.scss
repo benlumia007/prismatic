@@ -145,7 +145,7 @@
 				width: max-content;
 
 				&:hover {
-					color: #00A5E3;
+					color: #ffffff;
 					text-decoration: underline;
 					text-decoration-thickness: 2px;
 					text-underline-offset: 4px;
@@ -179,7 +179,7 @@
 
 				&.current-menu-item {
 					a {
-						color: #9AC3CE;
+						color: #ffffff;
 						padding: 0.5rem 1rem;
 						text-decoration: underline;
 						text-decoration-thickness: 2px;
@@ -189,7 +189,7 @@
 					.sub-menu {
 						.menu-item {
 							a {
-								color: #9AC3CE;
+								color: #ffffff;
 								padding: 0.5rem 1rem;
 								text-decoration: none;
 								text-decoration-thickness: 0;
@@ -200,7 +200,7 @@
 				}
 
 				a {
-					color: #9AC3CE;
+					color: #ffffff;
 					padding: 0.5rem 1rem;
 					text-decoration: none;
 				}
@@ -227,7 +227,7 @@
 						width: 200px;
 
 						a {
-							color: #9AC3CE;
+							color: #ffffff;
 						}
 
 						&:last-child {

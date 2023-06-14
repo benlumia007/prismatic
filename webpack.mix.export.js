@@ -22,6 +22,8 @@ let exportPath = 'prismatic';
 
 // Theme root-level files to include.
 let files = [
+	'404.php',
+	'archive.php',
 	'functions.php',
 	'footer.php',
 	'header.php',
