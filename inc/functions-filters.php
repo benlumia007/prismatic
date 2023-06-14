@@ -24,5 +24,5 @@ function prismatic_archive_title_filter() {
 		$title = esc_html__( 'Archives', 'prismatic' );
 	}
 
-	apply_filters( 'prismatic_archive_title', $title );
+	return apply_filters( 'prismatic_archive_title', $title );
 }
