@@ -20,7 +20,7 @@ function prismatic_customize_settings( $manager ) {
 	) );
 
 	$manager->add_setting( 'prismatic_theme_footer_credit', [
-		'default' => wp_kses('Proudly powered by <a href="https://www.classicpress.net">ClassicPress</a>', array( 'a' => array( 'href' => array() ) ) ),
-		'sanitize_callback' => 'sanitize_textarea_field',
+		'default' => 'Proudly powered by <a href="https://www.classicpress.com">ClassicPress</a>',
+		'sanitize_callback' => 'wp_kses_post',
 	] );
 }

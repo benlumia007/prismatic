@@ -13,7 +13,7 @@
 
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
-		<?php echo get_theme_mod( 'prismatic_theme_footer_credit' );?>
+		<?php echo wp_kses_post( get_theme_mod( 'prismatic_theme_footer_credit', 'Proudly powered by <a href="https://www.classicpress.com">ClassicPress</a>' ) );?>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
