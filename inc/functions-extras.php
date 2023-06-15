@@ -37,20 +37,18 @@ function prismatic_custom_background() {
 	$background = get_background_color();
 	$image = get_background_image();
 
-	if ( $background ) { ?>
-		<style>
-			body {
-				background: #<?php echo esc_attr( $background ); ?>;
-			}
-		</style>
-	<?php }
+	$style = '';
 
-	if ( $image ) { ?>
-		<style>
-			body {
-				background: url('<?php echo esc_attr( $image ); ?>') repeat scroll top left;
-			}
-		</style>
-	<?php }
+	if ( $background ) {
+			$style .= '.site-header, .site-footer { background: #' . $background . ' }';
+	}
+
+	if ( $image ) {
+		$style .= 'body { background: url( ' . $image .  ' ) repeat scroll top left }';
+	}
+
+	echo '<style>';
+	echo $style;
+	echo '</style>';
 }
 

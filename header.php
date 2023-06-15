@@ -34,7 +34,7 @@
 			<?php
 			if ( has_nav_menu( 'primary' ) ) { ?>
 				<nav id="primary" class="primary-menu">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'creativity' ); ?></button>
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'prismatic' ); ?></button>
 					<?php
 					wp_nav_menu(
 						array(

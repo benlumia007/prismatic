@@ -17,9 +17,9 @@ get_header(); ?>
 		<div class="no-sidebar">
 			<main id="primary" class="site-main">
 				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( '404 Not Found' ); ?></h1>
+					<h1 class="page-title"><?php esc_html_e( '404 Not Found', 'prismatic' ); ?></h1>
 					<p class="archive-description">
-						<?php esc_html_e( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help or checkout the latest posts below.' ) ?>
+						<?php esc_html_e( 'It looks like you stumbled upon a page that does not exist. Perhaps rolling the dice with a search might help or checkout the latest posts below.', 'prismatic' ) ?>
 						<?php get_search_form() ?>
 					</p>
 				</header><!-- .page-header -->

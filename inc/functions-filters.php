@@ -2,6 +2,7 @@
 
 # Filters the archive title and description.
 add_filter( 'get_the_archive_title', 'prismatic_archive_title_filter', 5  );
+add_action( 'wp_head', 'prismatic_custom_styles' );
 
 function prismatic_archive_title_filter() {
 	$title = '';
@@ -31,4 +32,31 @@ function prismatic_archive_title_filter() {
 	}
 
 	return apply_filters( 'prismatic_archive_title', $title );
+}
+
+function prismatic_custom_styles() {
+	$header_background = get_theme_mod( 'prismatic_theme_header_background', get_background_color() );
+	$footer_background = get_theme_mod( 'prismatic_theme_footer_background', '0b5e79' );
+	$title_color       = get_theme_mod( 'prismatic_theme_header_site_branding', 'ffffff' );
+
+
+	$styles = '';
+
+	if ( $header_background ) {
+		$styles .= ".site-header { background: $header_background; }";
+	}
+
+	if ( $footer_background ) {
+		$styles .= ".site-footer { background: $footer_background; }";
+	}
+
+	if ( $title_color ) {
+		$styles .= ".site-header .branding-navigation .site-branding .site-title a, .site-header .branding-navigation .site-branding .site-description { color: $title_color; }";
+	}
+
+	if ( $styles ) {
+		echo '<style type="text/css" id="custom-background-styles">';
+		echo esc_html( $styles );
+		echo '</style>';
+	}
 }
