@@ -32,3 +32,24 @@ function prismatic_parent_asset() {
 
 	return file_exists( $file ) ? json_decode( file_get_contents( $file ), true ) : null;
 }
+
+function prismatic_custom_background() {
+	$background = get_background_color();
+	$image = get_background_image();
+
+	if ( $background ) { ?>
+		<style>
+			body {
+				background: #<?php echo esc_url_raw( $background ); ?>
+			}
+		</style>
+	<?php }
+
+	if ( $image ) { ?>
+		<style>
+			body {
+				background: url('<?php echo esc_url_raw( $image ); ?>') repeat scroll top left;
+			}
+		</style>
+	<?php }
+}

@@ -31,6 +31,13 @@ function prismatic_setup() {
 		'search-form'
 	] );
 
+	$defaults = array(
+		'default-image'    =>  get_parent_theme_file_uri('assets/images/gray-cross.png' ),
+		'default-color' => 'ffffff',
+		'wp-head-callback' => 'prismatic_custom_background' // Callback function for custom background style
+	);
+	add_theme_support( 'custom-background', $defaults );
+
 	// Load theme translations.
 	load_theme_textdomain( 'prismatic', get_parent_theme_file_path( 'languages' ) );
 }

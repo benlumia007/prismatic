@@ -6,10 +6,10 @@ add_action( 'wp_head', 'prismatic_custom_styles' );
 function prismatic_customization( $wp_customize ) {
 
 	$panels = [
-		'theme_global'  => esc_html__( 'Theme: Global',  'prismatic' ),
-		'theme_header'  => esc_html__( 'Theme: Header',  'prismatic' ),
-		'theme_content' => esc_html__( 'Theme: Content', 'prismatic' ),
-		'theme_footer'  => esc_html__( 'Theme: Footer',  'prismatic' )
+		'prismatic_theme_global'  => esc_html__( 'Theme: Global',  'prismatic' ),
+		'prismatic_theme_header'  => esc_html__( 'Theme: Header',  'prismatic' ),
+		'prismatic_theme_content' => esc_html__( 'Theme: Content', 'prismatic' ),
+		'prismatic_theme_footer'  => esc_html__( 'Theme: Footer',  'prismatic' )
 	];
 
 	foreach ( $panels as $panel => $label ) {
@@ -19,26 +19,41 @@ function prismatic_customization( $wp_customize ) {
 		] );
 	}
 
-	$wp_customize->add_section( 'theme_global_background', [
-		'title' => esc_html__( 'Background', 'pristmatic' ),
-		'panel' => 'theme_global',
+	/// ---------------------------------------------
+	/// Global Settings
+	/// ---------------------------------------------
+
+	$wp_customize->get_section( 'custom_css' )->panel = 'prismatic_theme_global';
+	$wp_customize->get_section( 'custom_css' )->priority = 5;
+	$wp_customize->get_control( 'background_color' )->section = 'background_image';
+	$wp_customize->get_section( 'background_image' )->panel = 'prismatic_theme_global';
+	$wp_customize->get_section( 'background_image' )->section = 'colors';
+	$wp_customize->get_section( 'background_image' )->title = esc_html__( 'Background', 'prismatic' );
+	$wp_customize->get_section( 'background_image' )->priority = 10;
+
+	/// ---------------------------------------------
+	/// Header Settings
+	/// ---------------------------------------------
+	$wp_customize->add_section( 'prismatic_theme_header_section', [
+		'title' => esc_html__( 'Background', 'prismatic' ),
+		'panel' => 'prismatic_theme_header'
 	] );
 
-	$wp_customize->add_setting('theme_global_background', array(
-		'default'   => '#0B5E79',
-		'sanitize_callback' => 'sanitize_hex_color',
-	));
+	// Add background image setting and control
+	$wp_customize->add_setting( 'prismatic_theme_header_background', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+	) );
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'theme_global_background', array(
-		'label'     => esc_html__('Background Color', 'camaraderie'),
-		'section'   => 'theme_global_background',
-		'settings'  => 'theme_global_background',
-		'priority'  => 10
-	)));
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'prismatic_theme_header_background', array(
+		'label'    => __( 'Background Image', 'prismatic' ),
+		'section'  => 'prismatic_theme_header_section',
+		'settings' => 'prismatic_theme_header_background',
+		'priority' => 10, // Adjust the priority as needed
+	) ) );
 
-	$wp_customize->get_section( 'custom_css' )->panel = 'theme_global';
-	$wp_customize->get_section( 'title_tagline' )->panel = 'theme_header';
-	$wp_customize->get_section( 'static_front_page' )->panel = 'theme_content';
+	$wp_customize->get_section( 'title_tagline' )->panel = 'prismatic_theme_header';
+	$wp_customize->get_section( 'static_front_page' )->panel = 'prismatic_theme_content';
 }
 
 function prismatic_custom_styles() {
@@ -55,7 +70,5 @@ function prismatic_custom_styles() {
 		echo '.site-header, .site-footer { ' . $styles . ' }';
 		echo '</style>';
 	}
-
-
 
 }
