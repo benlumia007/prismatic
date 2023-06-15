@@ -158,6 +158,18 @@ h6 {
     float: left;
     width: 28.7179487179%;
   }
+  .no-sidebar .widget-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.125rem;
+    margin-top: 1.125rem;
+  }
+  .no-sidebar .widget-area .widget {
+    margin-top: 0;
+  }
+  .no-sidebar .widget-area .widget:first-child {
+    margin-top: 0;
+  }
 }
 .site-header {
   background: #0B5E79;
@@ -386,6 +398,20 @@ h6 {
     transform: translateY(0%);
     transition-delay: 0s, 0s, 0.3s;
   }
+}
+.site-main .loop .grid-items {
+  padding: 0;
+}
+.site-main .loop .grid-items .post {
+  background: #ffffff;
+  border: 0.063rem dotted #5394A8;
+  border-bottom: 0.063rem solid #5394A8;
+  line-height: 1.8rem;
+  margin-top: 1.125rem;
+  padding: 1.125rem;
+}
+.site-main .loop .grid-items .post:first-child {
+  margin-top: 1.125rem;
 }
 .site-main .page,
 .site-main .post {
@@ -696,6 +722,66 @@ h6 {
   width: auto;
   z-index: 100000;
   text-decoration: none;
+}
+
+.grid-col-1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1.125rem;
+}
+
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.125rem;
+}
+
+.grid-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.125rem;
+}
+
+.grid-col-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.125rem;
+}
+
+.grid-col-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1.125rem;
+}
+
+.grid-col-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1.125rem;
+}
+
+.grid-col-7 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 1.125rem;
+}
+
+.grid-col-8 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 1.125rem;
+}
+
+.grid-col-9 {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 1.125rem;
+}
+
+.grid-col-10 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 1.125rem;
 }
 
 .site-content:before, .site-content:after,

@@ -15,7 +15,13 @@ function prismatic_archive_title_filter() {
 	} elseif ( is_tax() ) {
 		$title = single_term_title( '', false );
 	} elseif ( is_author() ) {
-		 $title = prismatic_get_single_author_title();
+		$title = prismatic_get_single_author_title();
+	} elseif ( is_month() ) {
+		$title = get_the_date(esc_html_x('F Y', 'month date format', 'prismatic'));
+	} elseif ( is_year() ) {
+		$title = get_the_date(esc_html_x('Y', 'yearly archives date format', 'prismatic'));
+	} elseif ( is_day() ) {
+		$title = get_the_date( esc_html_x( 'F d, Y', 'yearly archives date format', 'prismatic' ) );
 	} elseif ( is_search() ) {
 
 	} elseif ( is_post_type_archive() ) {

@@ -103,5 +103,6 @@ function prismatic_widgets() {
 }
 add_action( 'widgets_init', 'prismatic_widgets' );
 
+require_once  get_parent_theme_file_path( 'inc/customizer.php' );
 require_once get_parent_theme_file_path( 'inc/functions-extras.php' );
 require_once get_parent_theme_file_path( 'inc/functions-filters.php' );
