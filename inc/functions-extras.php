@@ -40,7 +40,7 @@ function prismatic_custom_background() {
 	if ( $background ) { ?>
 		<style>
 			body {
-				background: #<?php echo esc_url_raw( $background ); ?>
+				background: #<?php echo esc_attr( $background ); ?>;
 			}
 		</style>
 	<?php }
@@ -48,8 +48,9 @@ function prismatic_custom_background() {
 	if ( $image ) { ?>
 		<style>
 			body {
-				background: url('<?php echo esc_url_raw( $image ); ?>') repeat scroll top left;
+				background: url('<?php echo esc_attr( $image ); ?>') repeat scroll top left;
 			}
 		</style>
 	<?php }
 }
+
