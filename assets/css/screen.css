@@ -813,6 +813,45 @@ h6 {
   text-align: center;
 }
 
+.widget.widget_calendar #wp-calendar table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.widget.widget_calendar #wp-calendar tr:nth-of-type(odd) {
+  background: #eeeeee;
+}
+.widget.widget_calendar #wp-calendar th {
+  background: color(black);
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+.widget.widget_calendar #wp-calendar th,
+.widget.widget_calendar #wp-calendar td {
+  border: 0.063em solid #cccccc;
+  padding: 0.438em;
+  text-align: center;
+}
+.widget.widget_calendar #wp-calendar {
+  border: 0.063em solid #cccccc;
+  margin-bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.widget.widget_calendar #wp-calendar a {
+  color: color(navy);
+}
+.widget.widget_calendar #wp-calendar caption {
+  font-weight: 700;
+  margin: 5px 0;
+  text-align: center;
+}
+.widget.widget_calendar #wp-calendar #today {
+  background: color(black);
+  color: color(white);
+  font-weight: 700;
+}
+
 @media screen and (max-width: 480px) {
   .widget {
     background: #ffffff;

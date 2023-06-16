@@ -1,3 +1,55 @@
+.widget {
+	&.widget_calendar {
+		#wp-calendar table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		#wp-calendar tr:nth-of-type(odd) {
+			background: #eeeeee;
+		}
+
+		#wp-calendar th {
+			background: color( black );
+			color: #ffffff;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		#wp-calendar th,
+		#wp-calendar td {
+			border: 0.063em solid #cccccc;
+			padding: 0.438em;
+			text-align: center;
+		}
+
+		#wp-calendar {
+			border: 0.063em solid #cccccc;
+			margin-bottom: 0;
+			text-align: center;
+			width: 100%;
+		}
+
+		#wp-calendar a {
+			color: color( navy );
+		}
+
+		#wp-calendar caption {
+			font-weight: 700;
+			margin: 5px 0;
+			text-align: center;
+		}
+
+		#wp-calendar {
+			#today {
+				background: color( black );
+				color: color( white );
+				font-weight: 700;
+			}
+		}
+	}
+}
+
 @media screen and ( max-width: 480px ) {
 	.widget {
 		background: #ffffff;

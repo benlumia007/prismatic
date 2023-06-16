@@ -38,6 +38,26 @@ function prismatic_archive_title_filter() {
 	return apply_filters( 'prismatic_archive_title', $title );
 }
 
+/**
+ * Filters the excerpt more link.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return string
+ */
+add_filter( 'excerpt_more', function() {
+
+	return sprintf(
+		'&thinsp;&hellip;&thinsp; <a href="%s" class="entry__more-link italic">%s</a>',
+		esc_url( get_permalink() ),
+		sprintf(
+		// Translators: %s is the post title for screen readers.
+			esc_html__( 'Continue reading&nbsp;%s&nbsp;&rarr;', 'exhale' ),
+			the_title( '<span class="screen-reader-text">', '</span>', false )
+		)
+	);
+} );
+
 function prismatic_custom_styles() {
 	$header_background = get_theme_mod( 'prismatic_theme_header_background', get_background_color() );
 	$footer_background = get_theme_mod( 'prismatic_theme_footer_background', '0b5e79' );
