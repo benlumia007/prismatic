@@ -48,9 +48,11 @@
 .posts-navigation,
 .post-navigation {
 	background: #ffffff;
-	border: 0.063em solid #cccccc;
-	clear: both;
-	padding: 0.938em;
+	border: 0.063rem dotted #5394A8;
+	border-bottom: 0.063rem solid #5394A8;
+	line-height: 1.8rem;
+	margin-top: 1.125rem;
+	padding: 0.5rem 1rem;
 }
 
 .posts-navigation .nav-links .nav-previous,

@@ -1,0 +1,222 @@
+.comments-area {
+	background: #ffffff;
+	border: 0.063rem dotted #5394A8;
+	border-bottom: 0.063rem solid #5394A8;
+	line-height: 1.8rem;
+	margin-top: 1.125rem;
+	padding: 0.5rem 1rem;
+
+	.comments-title {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	.comment-list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		.comment {
+			border: 0.063rem solid #cccccc;
+			margin: 1.125rem 0;
+			padding: 1.125rem;
+
+		}
+
+		.bypostauthor > {
+			.comment-body {
+				background: #eeeeee;
+				border: 0.063rem solid #cccccc;
+				padding: 1.125rem;
+			}
+		}
+
+		.comment-meta {
+			border-bottom: 0.063rem solid #cccccc;
+
+			.comment-author {
+				.fn {
+					font-size: 1.125rem;
+					font-weight: bold;
+
+					a {
+						border-bottom: none;
+					}
+
+				}
+
+				.says {
+					display: none;
+				}
+			}
+
+			.comment-metadata {
+				font-size: 0.875rem;
+
+				.comment-edit-link {
+					display: none;
+				}
+			}
+		}
+
+		.reply {
+			font-size: 0.875rem;
+			text-align: right;
+		}
+
+		.children {
+			list-style-type: none;
+			margin-top: 1.125rem 0;
+			padding-left: 2.250rem;
+
+
+			.comment {
+				border: none;
+				padding: 0;
+			}
+		}
+	}
+
+	.comment-respond {
+		margin-top: 1.125rem;
+
+		.comment-reply-title {
+			margin: 0;
+			padding: 0;
+		}
+
+		.logged-in-as {
+			font-size: 0.875rem;
+		}
+
+		.comment-form {
+			margin-top: -1rem;
+			.comment-form-comment {
+				&:before {
+					font-family: 'Font Awesome 5 Free';
+					content: "\f075";
+					float: left;
+					margin-left: 0.063em;
+					margin-right: 0.250em;
+				}
+
+				textarea {
+					border: 0.063em solid #cccccc;
+					box-sizing: border-box;
+					font-family: 'Merriewather', serif;
+					font-size: 1rem;
+					max-height: 230px;
+					max-width: 100%;
+					display: block;
+					padding: 0.5rem;
+					width: 100%;
+				}
+			}
+
+			.comment-form-author {
+				float: left;
+				width: 49.20634920634921%;
+
+				&:before {
+					font-family: 'Font Awesome 5 Free';
+					content: "\f007";
+					float: left;
+					margin-left: 0.063em;
+					margin-right: 0.250em;
+				}
+
+				input[type="text"] {
+					border: 0.063em solid #cccccc;
+					box-sizing: border-box;
+					font-family: 'Merriewather', serif;
+					font-size: 1em;
+					display: block;
+					padding: 0.5em;
+					width: 100%;
+				}
+			}
+
+			.comment-form-email {
+				float: right;
+				width: 49.20634920634921%;
+
+				&:before {
+					font-family: 'Font Awesome 5 Free';
+					content: "\f0e0";
+					float: left;
+					margin-left: 0.063em;
+					margin-right: 0.250em;
+				}
+
+				input[type="email"] {
+					border: 0.063em solid #cccccc;
+					box-sizing: border-box;
+					font-family: 'Merriewather', serif;
+					font-size: 1em;
+					display: block;
+					padding: 0.5em;
+					width: 100%;
+				}
+			}
+
+			.comment-form-url {
+				margin-bottom: 1.3em;
+				width: 100%;
+
+				&:before {
+					font-family: 'Font Awesome 5 Free';
+					content: "\f0ac";
+					float: left;
+					margin-left: 0.063em;
+					margin-right: 0.250em;
+				}
+
+				input[type="url"] {
+					border: 0.063em solid #cccccc;
+					box-sizing: border-box;
+					font-family: 'Merriewather', serif;
+					font-size: 1em;
+					display: block;
+					padding: 0.5em;
+					width: 100%;
+				}
+			}
+
+			.form-submit {
+				margin-bottom: 0;
+
+				.submit {
+					cursor: pointer;
+					display: inline-block;
+					margin: 0;
+					padding: 0.5rem 1rem;
+					line-height: 1;
+					font-family: var(--font-family-secondary);
+					font-size: 1rem;
+					border-radius: 3px;
+					white-space: normal;
+					word-break: break-all;
+					transition: all .5s ease-in-out;
+				}
+			}
+
+			.required {
+				color: #FF0000;
+				font-size: 0.625em;
+			}
+
+			.comment-notes {
+				font-size: 12px;
+			}
+
+			.comment-form-cookies-consent {
+				font-size: 14px;
+
+				input[type="checkbox"] {
+					margin-right: 0.250em;
+				}
+			}
+		}
+	}
+}

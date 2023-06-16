@@ -1,6 +1,8 @@
 .site-content,
 .site-main,
-.entry-content {
+.entry-content,
+.posts-pagination,
+.post-navigation {
 	&:before,
 	&:after {
 		clear: both;

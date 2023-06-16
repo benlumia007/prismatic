@@ -28,10 +28,12 @@ get_header(); ?>
 					get_template_part( 'template-parts/content', 'single' );
 
 				endwhile;
-
-				the_posts_navigation();
-				?>
-
+				comments_template();
+                    the_post_navigation(array(
+                        'next_text' => '<span class="post-next" aria-hiddent="true">' . __('Next', 'camaraderie') . '</span>' . '<span class="post-title">%title</span>',
+                        'prev_text' => '<span class="post-previous" aria-hidden="true">' . __( 'Previous', 'camaraderie' ) . '</span> ' . '<span class="post-title">%title</span>',
+                    ));
+                ?>
 			</main><!-- #main -->
 			<?php get_sidebar(); ?>
 		</div>
