@@ -18,5 +18,10 @@ function prismatic_scripts() {
 		'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'prismatic' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'prismatic' ) . '</span>',
 	] );
+
+	// Loads ClassicPress' comment-reply script where appropriate.
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'prismatic_scripts' );
