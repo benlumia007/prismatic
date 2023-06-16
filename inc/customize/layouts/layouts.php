@@ -1,12 +1,13 @@
 <?php
 
 add_action( 'customize_register', 'prismatic_customize_layouts' );
+add_action( 'customize_controls_enqueue_scripts', 'prismatic_customize_scripts' );
 
 function prismatic_customize_layouts( $wp_customize ) {
 
 	//
 	$wp_customize->add_section( 'prismatic_global_layout', [
-		'title' => esc_html__( 'Global Layout', 'prismatic' ),
+		'title' => esc_html__( 'Layout', 'prismatic' ),
 		'panel' => 'prismatic_theme_content'
 
 	] );
@@ -37,4 +38,9 @@ function prismatic_sanitize_layout($value) {
 		$value = 'left-sidebar';
 	}
 	return $value;
+}
+
+function prismatic_customize_scripts() {
+	wp_enqueue_script( 'creativity-customize-controls', prismatic_asset( 'js/customize-controls.js' ), [ 'jquery' ], null, true );
+	wp_enqueue_style(  'creativity-customize-controls', prismatic_asset( 'css/customize-controls.css' ), null, null );
 }

@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<section class="site-content">
-		<div id="global-layouts" class="left-sidebar">
+		<div id="global-layouts" class="<?php echo esc_attr( get_theme_mod( 'prismatic_global_layout', 'left-sidebar' ) ); ?>">
 			<main id="primary" class="site-main">
 				<?php
 				if ( have_posts() ) :
