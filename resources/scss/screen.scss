@@ -82,6 +82,7 @@
 // fonts, etc. are best handled here. These are the base styles that other
 // styles will build upon.
 
+@import '07.components/__index.scss';
 @import '07.components/site-header';
 @import '07.components/primary-navigation';
 @import '07.components/site-main';
@@ -97,6 +98,4 @@
 // necessary, this is the only place where `!important` rules should go, but
 // only if necessary.
 
-@import '08.utilities/a11y';
-@import '08.utilities/grid';
-@import '08.utilities/helpers';
+@import '08.utilities/__index.scss';

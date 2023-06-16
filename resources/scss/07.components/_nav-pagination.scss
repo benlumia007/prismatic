@@ -1,0 +1,96 @@
+.pagination {
+	margin: 1.125em 0;
+	text-align: center;
+}
+
+.page-numbers {
+	background: #ffffff;
+	border: 0.063em solid #c3c3c3;
+	color: #333333;
+	display: inline-block;
+	padding: 0.5em 1em;
+	text-decoration: none;
+}
+
+.page-numbers:hover {
+	background: #000;
+	color: #fff;
+	border-color: #000;
+}
+
+.page-number:hover a {
+	color: #ffffff;
+}
+
+.page-numbers.current {
+	background: #000000;
+	color: #ffffff;
+}
+
+.page-links > a {
+	border: 0.063em solid #999999;
+	padding: 0.5em 1em;
+	text-decoration: none;
+}
+
+.page-links > a:hover {
+	background: #000000;
+	color: #ffffff;
+}
+
+.page-links > span {
+	background: #000000;
+	border: 0.063em solid #666666;
+	color: #ffffff;
+	padding: 0.5em 1em;
+}
+
+.posts-navigation,
+.post-navigation {
+	background: #ffffff;
+	border: 0.063em solid #cccccc;
+	clear: both;
+	padding: 0.938em;
+}
+
+.posts-navigation .nav-links .nav-previous,
+.post-navigation .nav-links .nav-previous {
+	float: left;
+	margin: 0.5em 0;
+}
+
+.posts-navigation .nav-links .nav-next,
+.post-navigation .nav-links .nav-next {
+	float: right;
+	margin: 0.5em 0;
+}
+
+.posts-navigation .nav-links .nav-previous .post-previous,
+.post-navigation .nav-links .nav-previous .post-previous {
+	display: block;
+	font-size: 0.9375em;
+	font-weight: 700;
+	text-align: left;
+}
+
+.posts-navigation .nav-links .nav-next .post-next,
+.post-navigation .nav-links .nav-next .post-next {
+	display: block;
+	font-size: 0.9375em;
+	font-weight: 700;
+	text-align: right
+}
+
+.posts-navigation .nav-links .nav-previous .post-title,
+.post-navigation .nav-links .nav-previous .post-title {
+	font-size: 0.813em;
+}
+
+.posts-navigation .nav-links .nav-next .post-title,
+.post-navigation .nav-links .nav-next .post-title {
+	font-size: 0.813em;
+}
+
+.link-pages {
+	text-align: center;
+}
