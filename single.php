@@ -1,15 +1,8 @@
 <?php
 /**
- * The main template file
+ * The template for displaying all single posts
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package Prismatic
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  */
 
 get_header(); ?>
@@ -29,10 +22,6 @@ get_header(); ?>
 
 				endwhile;
 				comments_template();
-                    the_post_navigation(array(
-                        'next_text' => '<span class="post-next" aria-hiddent="true">' . __('Next', 'camaraderie') . '</span>' . '<span class="post-title">%title</span>',
-                        'prev_text' => '<span class="post-previous" aria-hidden="true">' . __( 'Previous', 'camaraderie' ) . '</span> ' . '<span class="post-title">%title</span>',
-                    ));
                 ?>
 			</main><!-- #main -->
 			<?php get_sidebar(); ?>

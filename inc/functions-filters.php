@@ -16,7 +16,7 @@ function prismatic_archive_title_filter() {
 	} elseif ( is_tax() ) {
 		$title = single_term_title( '', false );
 	} elseif ( is_author() ) {
-		$title = prismatic_get_single_author_title();
+		$title = get_the_author_meta( 'display_name', absint( get_query_var( 'author' ) ) );
 	} elseif ( is_month() ) {
 		$title = get_the_date(esc_html_x('F Y', 'month date format', 'prismatic'));
 	} elseif ( is_year() ) {
@@ -24,7 +24,11 @@ function prismatic_archive_title_filter() {
 	} elseif ( is_day() ) {
 		$title = get_the_date( esc_html_x( 'F d, Y', 'yearly archives date format', 'prismatic' ) );
 	} elseif ( is_search() ) {
-
+		$title = sprintf(
+		// Translators: %s is the search query.
+			esc_html__( 'Search results for: %s', 'prismatic' ),
+			get_search_query()
+		);
 	} elseif ( is_post_type_archive() ) {
 		$title = post_type_archive_title( '', false );
 	} elseif ( is_archive() ) {

@@ -48,7 +48,7 @@ function prismatic_custom_background() {
 	}
 
 	echo '<style>';
-	echo $style;
+	echo esc_html( $style );
 	echo '</style>';
 }
 

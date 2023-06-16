@@ -1,10 +1,9 @@
 <?php
 /**
- * The sidebar containing the main widget area
+ * The left sidebar containing a widget area
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
  */
 
 if ( ! is_active_sidebar( 'primary' ) ) {
