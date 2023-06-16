@@ -402,6 +402,7 @@ h6 {
   border-bottom: 0.063rem solid #5394A8;
   line-height: 1.8rem;
   margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
   padding: 0.5rem 1rem;
 }
 
@@ -695,7 +696,7 @@ h6 {
   border: 0.063rem dotted #5394A8;
   border-bottom: 0.063rem solid #5394A8;
   line-height: 1.8rem;
-  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
   padding: 1.125rem;
 }
 .site-main .page:first-child,
@@ -740,11 +741,11 @@ h6 {
   background: #ffffff;
   border: 0.063rem dotted #5394A8;
   border-bottom: 0.063rem solid #5394A8;
-  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
   padding: 1.125rem;
 }
-.widget:first-child {
-  margin-top: 0;
+.widget:last-child {
+  margin-bottom: 0;
 }
 .widget .widget-title {
   margin: 0;
