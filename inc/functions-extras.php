@@ -40,7 +40,7 @@ function prismatic_custom_background() {
 	$style = '';
 
 	if ( $background ) {
-			$style .= '.site-header, .site-footer { background: #' . $background . ' }';
+			$style .= 'body { background: #' . $background . ' }';
 	}
 
 	if ( $image ) {

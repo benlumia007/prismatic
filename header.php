@@ -23,6 +23,7 @@
 	<header id="masthead" class="site-header">
 		<div class="branding-navigation">
 			<div class="site-branding">
+				<?php the_custom_logo() ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<p class="site-description"><?php echo get_bloginfo( 'description' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			</div><!-- .site-branding -->

@@ -55,6 +55,19 @@ h6 {
   margin: 2.33em 0;
 }
 
+figure,
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.custom-logo-link {
+  float: left;
+  width: 200px;
+  height: 38px;
+  margin-right: 0.5rem;
+}
+
 @media screen and (max-width: 480px) {
   .site-content {
     margin: 1.125rem;
@@ -244,9 +257,6 @@ h6 {
   }
 }
 .comments-area {
-  background: #ffffff;
-  border: 0.063rem dotted #5394A8;
-  border-bottom: 0.063rem solid #5394A8;
   line-height: 1.8rem;
   margin-top: 1.125rem;
   padding: 0.5rem 1rem;
@@ -525,7 +535,6 @@ h6 {
 }
 
 .site-header {
-  background: #0B5E79;
   padding: 0.5rem;
 }
 .site-header .branding-navigation {
@@ -543,14 +552,14 @@ h6 {
   padding: 0;
 }
 .site-header .branding-navigation .site-branding .site-title a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 .site-header .branding-navigation .site-branding .site-title a:hover, .site-header .branding-navigation .site-branding .site-title a:focus {
   text-decoration: underline;
 }
 .site-header .branding-navigation .site-branding .site-description {
-  color: #ffffff;
+  color: #000000;
   float: left;
   font-size: 1.25rem;
   padding: 0.875rem;
@@ -689,7 +698,7 @@ h6 {
   .primary-menu .menu-items .menu-item.menu-item-has-children > a:after {
     content: "";
     display: inline-block;
-    border: solid white;
+    border: solid black;
     border-width: 0 0.25rem 0.25rem 0;
     transform: rotate(45deg);
     padding: 0.2rem;
@@ -699,21 +708,21 @@ h6 {
     display: none;
   }
   .primary-menu .menu-items .menu-item.current-menu-item a {
-    color: #ffffff;
+    color: #000000;
     padding: 0.5rem 1rem;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
   }
   .primary-menu .menu-items .menu-item.current-menu-item .sub-menu .menu-item a {
-    color: #ffffff;
+    color: #000000;
     padding: 0.5rem 1rem;
     text-decoration: none;
     text-decoration-thickness: 0;
     text-underline-offset: 0;
   }
   .primary-menu .menu-items .menu-item a {
-    color: #ffffff;
+    color: #000000;
     padding: 0.5rem 1rem;
     text-decoration: none;
   }
@@ -721,7 +730,7 @@ h6 {
     display: none;
   }
   .primary-menu .menu-items .menu-item .sub-menu {
-    background: #0B5E79;
+    background: #000000;
     left: 0;
     list-style-type: none;
     margin: 0.7rem 0;
@@ -756,9 +765,6 @@ h6 {
   padding: 0;
 }
 .site-main .loop .grid-items .post {
-  background: #ffffff;
-  border: 0.063rem dotted #5394A8;
-  border-bottom: 0.063rem solid #5394A8;
   line-height: 1.8rem;
   margin-top: 1.125rem;
   padding: 1.125rem;
@@ -768,9 +774,6 @@ h6 {
 }
 .site-main .page,
 .site-main .post {
-  background: #ffffff;
-  border: 0.063rem dotted #5394A8;
-  border-bottom: 0.063rem solid #5394A8;
   line-height: 1.8rem;
   margin-top: 1.125rem;
   padding: 1.125rem;
@@ -797,9 +800,6 @@ h6 {
 }
 
 .page-header {
-  background: #ffffff;
-  border: 0.063rem dotted #5394A8;
-  border-bottom: 0.063rem solid #5394A8;
   line-height: 1.8rem;
   margin-top: 1.125rem;
   padding: 1.125rem;
@@ -855,8 +855,6 @@ h6 {
 @media screen and (max-width: 480px) {
   .widget {
     background: #ffffff;
-    border: 0.063rem dotted #5394A8;
-    border-bottom: 0.063rem solid #5394A8;
     margin-top: 1.125rem;
     padding: 1.125rem;
   }
@@ -1013,9 +1011,6 @@ h6 {
 }
 @media screen and (min-width: 1171px) {
   .widget {
-    background: #ffffff;
-    border: 0.063rem dotted #5394A8;
-    border-bottom: 0.063rem solid #5394A8;
     margin-top: 1.125rem;
     padding: 1.125rem;
   }
@@ -1044,13 +1039,12 @@ h6 {
   }
 }
 .site-footer {
-  background: #0B5E79;
-  color: #ffffff;
+  color: #000000;
   padding: 1.125rem;
   text-align: center;
 }
 .site-footer .site-info a {
-  color: #ffffff;
+  color: #000000;
 }
 
 .screen-reader-text {

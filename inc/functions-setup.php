@@ -25,11 +25,18 @@ function prismatic_setup() {
 	] );
 
 	$defaults = array(
-		'default-image'    =>  get_parent_theme_file_uri('assets/images/gray-cross.png' ),
-		'default-color' => '0b5e79',
+		'default-image'    =>  '',
+		'default-color'    => 'ffffff',
 		'wp-head-callback' => 'prismatic_custom_background' // Callback function for custom background style
 	);
 	add_theme_support( 'custom-background', $defaults );
+
+	add_theme_support( 'custom-logo', [
+		'flex-height' => true,
+		'flex-width' => true,
+		'height' => 38,
+		'width' => null
+	] );
 
 	// Load theme translations.
 	load_theme_textdomain( 'prismatic', get_parent_theme_file_path( 'languages' ) );

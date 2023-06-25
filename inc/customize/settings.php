@@ -15,7 +15,7 @@ function prismatic_customize_settings( $manager ) {
 
 	// Add background image setting and control
 	$manager->add_setting( 'prismatic_theme_header_site_branding', array(
-		'default'           => 'ffffff',
+		'default'           => '000000',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
