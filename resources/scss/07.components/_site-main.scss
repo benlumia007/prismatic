@@ -52,5 +52,14 @@
 			margin: 1.125rem 0;
 			text-align: center;
 		}
+
+		.entry-content {
+
+			.entry__more-link {
+				text-decoration: underline;
+				text-decoration-thickness: 2px;
+				text-underline-offset: 2px;
+			}
+		}
 	}
 }

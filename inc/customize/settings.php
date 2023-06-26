@@ -14,6 +14,12 @@ add_action( 'customize_register', 'prismatic_customize_settings' );
 function prismatic_customize_settings( $manager ) {
 
 	// Add a new setting
+	$manager->add_setting( 'prismatic_theme_header_border', array(
+		'default'           => 'ffffff',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	// Add a new setting
 	$manager->add_setting( 'prismatic_theme_header_background', array(
 		'default'           => 'ffffff',
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -28,8 +34,26 @@ function prismatic_customize_settings( $manager ) {
 
 
 	// Add a new setting
+	$manager->add_setting( 'prismatic_theme_footer_border', array(
+		'default'           => 'ffffff',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	// Add a new setting
 	$manager->add_setting( 'prismatic_theme_footer_background', array(
-		'default'           => '#ffffff',
+		'default'           => 'ffffff',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	// Add a new setting
+	$manager->add_setting( 'prismatic_theme_footer_text_color', array(
+		'default'           => '000000',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	// Add a new setting
+	$manager->add_setting( 'prismatic_theme_footer_text_link_color', array(
+		'default'           => '0369a1',
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 

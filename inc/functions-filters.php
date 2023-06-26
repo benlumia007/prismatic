@@ -59,10 +59,19 @@ add_filter( 'excerpt_more', function() {
 } );
 
 function prismatic_custom_styles() {
+	$header_border = get_theme_mod( 'prismatic_theme_header_border', '' );
 	$header_background = get_theme_mod( 'prismatic_theme_header_background', 'ffffff' );
 	$header_description = get_theme_mod( 'prismatic_theme_header_site_description', '000000' );
+	$footer_border = get_theme_mod( 'prismatic_theme_footer_border', 'ffffff' );
+	$footer_background = get_theme_mod( 'prismatic_theme_footer_background', 'ffffff' );
+	$footer_text = get_theme_mod( 'prismatic_theme_footer_text_color', 'ffffff' );
+	$footer_text_link = get_theme_mod( 'prismatic_theme_footer_text_link_color', '000000' );
 
 	$styles = '';
+
+	if ( $header_border ) {
+		$styles .= '.site-header { border-bottom: 0.063rem solid ' . $header_border . '}';
+	}
 
 	if ( $header_background ) {
 		$styles .= '.site-header { background: ' . $header_background . '}';
@@ -70,6 +79,22 @@ function prismatic_custom_styles() {
 
 	if ( $header_description ) {
 		$styles .= '.site-header .branding-navigation .site-branding .site-description { color: ' . $header_description . '}';
+	}
+
+	if ( $footer_border ) {
+		$styles .= '.site-footer { border-top: 0.063rem solid ' . $footer_border . '}';
+	}
+
+	if ( $footer_background ) {
+		$styles .= '.site-footer { background: ' . $footer_background . '}';
+	}
+
+	if ( $footer_text ) {
+		$styles .= '.site-footer .site-info { color: ' . $footer_text . '}';
+	}
+
+	if ( $footer_text_link ) {
+		$styles .= '.site-footer .site-info a { color: ' . $footer_text_link . '}';
 	}
 
 	if ( $styles ) {

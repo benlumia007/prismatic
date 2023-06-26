@@ -24,6 +24,14 @@ function prismatic_customize_controls( $manager ) {
 	/// ----------------------------------------------------------------------------------------------------------------
 
 	// Add a new control
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_border', array(
+		'label'    => 'Header: Border',
+		'section'  => 'prismatic_theme_header_colors',
+		'settings' => 'prismatic_theme_header_border',
+		'priority' => 5
+	) ) );
+
+	// Add a new control
 	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_background', array(
 		'label'    => 'Header: Background',
 		'section'  => 'prismatic_theme_header_colors',
@@ -39,11 +47,35 @@ function prismatic_customize_controls( $manager ) {
 		'priority' => 15
 	) ) );
 
+
+	// Add a new control
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_border', array(
+		'label'    => 'Footer: Border',
+		'section'  => 'prismatic_theme_footer_colors',
+		'settings' => 'prismatic_theme_footer_border',
+		'priority' => 5
+	) ) );
+
+
 	// Add a new control
 	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_background', array(
-		'label'    => 'Background Color',
+		'label'    => 'Footer: Background',
 		'section'  => 'prismatic_theme_footer_colors',
 		'settings' => 'prismatic_theme_footer_background',
+	) ) );
+
+	// Add a new control
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_text_color', array(
+		'label'    => 'Footer: Text',
+		'section'  => 'prismatic_theme_footer_colors',
+		'settings' => 'prismatic_theme_footer_text_color',
+	) ) );
+
+	// Add a new control
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_text_link_color', array(
+		'label'    => 'Footer: Link',
+		'section'  => 'prismatic_theme_footer_colors',
+		'settings' => 'prismatic_theme_footer_text_link_color',
 	) ) );
 
 	$manager->add_control( 'prismatic_theme_footer_credit', [
