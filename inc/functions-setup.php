@@ -24,6 +24,24 @@ function prismatic_setup() {
 		'search-form'
 	] );
 
+	// Adds featured image support.
+	add_theme_support( 'post-thumbnails' );
+
+	/**
+	 * By add_image_size( 'prismatic-small-thumbnails', 324, 324, true );. This should be used for content in the home for blogs.
+	 */
+	add_image_size( 'prismatic-small-thumbnails', 324, 324, true );
+
+	/**
+	 * By add_image_size( 'prismatic-medium-thumbnails', 810, 396, true );. This should be used for content that has sidebars.
+	 */
+	add_image_size( 'prismatic-medium-thumbnails', 810, 396, true );
+
+	/**
+	 * By add_image_size( 'prismatic-large-thumbnails', 1170, 614, true );. This should be used for content that has no sidebars.
+	 */
+	add_image_size( 'prismatic-large-thumbnails', 1170, 614, true );
+
 	$defaults = array(
 		'default-image'    =>  '',
 		'default-color'    => 'ffffff',

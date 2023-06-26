@@ -48,6 +48,11 @@ function prismatic_customize_sections( $manager ) {
 	/// ----------------------------------------------------------------------------------------------------------------
 	///  Theme Footer
 	/// ----------------------------------------------------------------------------------------------------------------
+	$manager->add_section( 'prismatic_theme_footer_colors', [
+		'title' => esc_html__( 'Colors', 'prismatic' ),
+		'panel' => 'prismatic_theme_footer'
+	] );
+
 	$manager->add_section( 'prismatic_theme_footer_credit', [
 		'title' => esc_html__( 'Credit', 'prismatic' ),
 		'panel' => 'prismatic_theme_footer'

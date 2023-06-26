@@ -9,6 +9,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( has_post_thumbnail() ) { ?>
+		<picture class="post-thumbnail">
+			<?php the_post_thumbnail( 'prismatic-medium-thumbnails' ); ?>
+		</picture>
+	<?php } ?>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->

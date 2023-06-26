@@ -30,6 +30,20 @@ function prismatic_customize_controls( $manager ) {
 		'priority' => 20, // Adjust the priority as needed
 	) ) );
 
+	// Add a new control
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_background', array(
+		'label'    => 'Background Color',
+		'section'  => 'prismatic_theme_header_background',
+		'settings' => 'prismatic_theme_header_background',
+	) ) );
+
+	// Add a new control
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_background', array(
+		'label'    => 'Background Color',
+		'section'  => 'prismatic_theme_footer_colors',
+		'settings' => 'prismatic_theme_footer_background',
+	) ) );
+
 	$manager->add_control( 'prismatic_theme_footer_credit', [
 		'label' => esc_html__( 'Credit', 'prismatic' ),
 		'type' => 'textarea',

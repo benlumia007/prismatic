@@ -19,6 +19,18 @@ function prismatic_customize_settings( $manager ) {
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
+	// Add a new setting
+	$manager->add_setting( 'prismatic_theme_header_background', array(
+		'default'           => '#ffffff',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
+	// Add a new setting
+	$manager->add_setting( 'prismatic_theme_footer_background', array(
+		'default'           => '#ffffff',
+		'sanitize_callback' => 'sanitize_hex_color',
+	) );
+
 	$manager->add_setting( 'prismatic_theme_footer_credit', [
 		'default' => 'Proudly powered by <a href="https://www.classicpress.com">ClassicPress</a>',
 		'sanitize_callback' => 'wp_kses_post',

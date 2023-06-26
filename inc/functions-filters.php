@@ -59,8 +59,8 @@ add_filter( 'excerpt_more', function() {
 } );
 
 function prismatic_custom_styles() {
-	$header_background = get_theme_mod( 'prismatic_theme_header_background', get_background_color() );
-	$footer_background = get_theme_mod( 'prismatic_theme_footer_background', '0b5e79' );
+	$header_background = get_theme_mod( 'prismatic_theme_header_background', 'ffffff' );
+	$footer_background = get_theme_mod( 'prismatic_theme_footer_background', 'ffffff' );
 	$title_color       = get_theme_mod( 'prismatic_theme_header_site_branding', 'ffffff' );
 
 
