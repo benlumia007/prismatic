@@ -47,3 +47,4 @@
 			?>
 		</div><!-- #branding-navigation -->
 	</header><!-- #masthead -->
+	<?php the_custom_header_markup() ?>

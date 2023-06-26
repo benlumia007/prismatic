@@ -23,18 +23,20 @@ function prismatic_customize_controls( $manager ) {
 	///  Theme Header
 	/// ----------------------------------------------------------------------------------------------------------------
 
-	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_site_branding', array(
-		'label'    => __( 'Site Branding Color', 'prismatic' ),
-		'section'  => 'prismatic_theme_header_background',
-		'settings' => 'prismatic_theme_header_site_branding',
-		'priority' => 20, // Adjust the priority as needed
+	// Add a new control
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_background', array(
+		'label'    => 'Header: Background',
+		'section'  => 'prismatic_theme_header_colors',
+		'settings' => 'prismatic_theme_header_background',
+		'priority' => 5
 	) ) );
 
 	// Add a new control
-	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_background', array(
-		'label'    => 'Background Color',
-		'section'  => 'prismatic_theme_header_background',
-		'settings' => 'prismatic_theme_header_background',
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_site_description', array(
+		'label'    => 'Header: Site Description',
+		'section'  => 'prismatic_theme_header_colors',
+		'settings' => 'prismatic_theme_header_site_description',
+		'priority' => 15
 	) ) );
 
 	// Add a new control
@@ -49,4 +51,8 @@ function prismatic_customize_controls( $manager ) {
 		'type' => 'textarea',
 		'section' => 'prismatic_theme_footer_credit'
 	] );
+
+	$manager->get_control( 'header_textcolor' )->section = 'prismatic_theme_header_colors';
+	$manager->get_control( 'header_textcolor' )->label = esc_html__( 'Header: Site Title', 'prismatic' );
+	$manager->get_control( 'header_textcolor' )->priority = 10;
 }

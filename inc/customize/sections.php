@@ -31,15 +31,19 @@ function prismatic_customize_sections( $manager ) {
 	///  Theme Header
 	/// ----------------------------------------------------------------------------------------------------------------
 
-	$manager->add_section( 'prismatic_theme_header_background', [
+	// Static Front Page
+	$manager->get_section( 'static_front_page' )->panel = 'prismatic_theme_content';
+
+	// Colors
+	$manager->add_section( 'prismatic_theme_header_colors', [
 		'title' => esc_html__( 'Colors', 'prismatic' ),
 		'panel' => 'prismatic_theme_header'
 	] );
 
+	$manager->get_section( 'header_image')->panel = 'prismatic_theme_header';
+	$manager->get_section( 'header_image' )->priority = 201;
 	$manager->get_section( 'title_tagline' )->panel = 'prismatic_theme_header';
 	$manager->get_section( 'title_tagline' )->title = esc_html__( 'Branding', 'prismatic' );
-
-	$manager->get_section( 'static_front_page' )->panel = 'prismatic_theme_content';
 
 	/// ----------------------------------------------------------------------------------------------------------------
 	///  Theme Content

@@ -60,22 +60,16 @@ add_filter( 'excerpt_more', function() {
 
 function prismatic_custom_styles() {
 	$header_background = get_theme_mod( 'prismatic_theme_header_background', 'ffffff' );
-	$footer_background = get_theme_mod( 'prismatic_theme_footer_background', 'ffffff' );
-	$title_color       = get_theme_mod( 'prismatic_theme_header_site_branding', 'ffffff' );
-
+	$header_description = get_theme_mod( 'prismatic_theme_header_site_description', '000000' );
 
 	$styles = '';
 
 	if ( $header_background ) {
-		$styles .= ".site-header { background: $header_background; }";
+		$styles .= '.site-header { background: ' . $header_background . '}';
 	}
 
-	if ( $footer_background ) {
-		$styles .= ".site-footer { background: $footer_background; }";
-	}
-
-	if ( $title_color ) {
-		$styles .= ".site-header .branding-navigation .site-branding .site-title a, .site-header .branding-navigation .site-branding .site-description { color: $title_color; }";
+	if ( $header_description ) {
+		$styles .= '.site-header .branding-navigation .site-branding .site-description { color: ' . $header_description . '}';
 	}
 
 	if ( $styles ) {

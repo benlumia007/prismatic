@@ -34,8 +34,9 @@ function prismatic_parent_asset() {
 }
 
 function prismatic_custom_background() {
-	$background = get_background_color();
-	$image = get_background_image();
+	$background  = get_background_color();
+	$image       = get_background_image();
+	$header_text = get_header_textcolor();
 
 	$style = '';
 
@@ -45,6 +46,10 @@ function prismatic_custom_background() {
 
 	if ( $image ) {
 		$style .= 'body { background: url( ' . $image .  ' ) repeat scroll top left }';
+	}
+
+	if ( $header_text ) {
+		$style .= '.site-header .branding-navigation .site-branding .site-title a { color: #' . $header_text .  '}';
 	}
 
 	echo '<style>';

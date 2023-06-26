@@ -9,15 +9,19 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<div class="entry-metadata">
+			<?php prismatic_display_author(); ?>
+			<?php prismatic_display_date( [ 'before' => sep() ] ); ?>
+			<?php prismatic_display_comments_link( [ 'before' => sep() ] ); ?>
+		</div>
+	</header><!-- .entry-header -->
 	<?php if ( has_post_thumbnail() ) { ?>
 		<picture class="post-thumbnail">
 			<?php the_post_thumbnail( 'prismatic-medium-thumbnails' ); ?>
 		</picture>
 	<?php } ?>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
-
 	<div class="entry-content">
 		<?php
 		the_content();

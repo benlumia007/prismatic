@@ -56,6 +56,17 @@ function prismatic_setup() {
 		'width' => null
 	] );
 
+	add_theme_support( 'custom-header', [
+			'default-text-color' => '000000',
+			'default-image'      => '',
+			'height'             => 500,
+			'max-width'          => 2000,
+			'width'              => 2000,
+			'flex-height'        => false,
+			'flex-width'         => false,
+	] );
+
+
 	// Load theme translations.
 	load_theme_textdomain( 'prismatic', get_parent_theme_file_path( 'languages' ) );
 }

@@ -27,6 +27,7 @@
 		}
 
 		.entry-header {
+			text-align: center;
 
 			.entry-title {
 				margin-top: 0;
@@ -43,6 +44,13 @@
 					}
 				}
 			}
+		}
+
+		.post-thumbnail {
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+			display: block;
+			margin: 1.125rem 0;
+			text-align: center;
 		}
 	}
 }
