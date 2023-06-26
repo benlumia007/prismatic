@@ -27,6 +27,14 @@ function prismatic_customize_sections( $manager ) {
 	$manager->get_section( 'background_image' )->title = esc_html__( 'Background', 'prismatic' );
 	$manager->get_section( 'background_image' )->priority = 10;
 
+
+	$manager->add_section( 'prismatic_theme_global_layout', [
+		'title' => esc_html__( 'Layout', 'prismatic' ),
+		'panel' => 'prismatic_theme_global',
+		'priority' => 10,
+
+	] );
+
 	/// ----------------------------------------------------------------------------------------------------------------
 	///  Theme Header
 	/// ----------------------------------------------------------------------------------------------------------------

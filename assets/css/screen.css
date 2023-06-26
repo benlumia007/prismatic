@@ -547,6 +547,9 @@ a:hover, a:focus {
 .site-header {
   padding: 0.5rem;
 }
+.site-header.full .branding-navigation {
+  max-width: 100%;
+}
 .site-header .branding-navigation {
   display: grid;
   grid-template-columns: 1fr 1fr;

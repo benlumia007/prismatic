@@ -19,6 +19,19 @@ function prismatic_customize_controls( $manager ) {
 
 	$manager->get_control( 'background_color' )->section = 'background_image';
 
+	// Register a control for the dropdown
+	$manager->add_control( 'prismatic_theme_global_layout', array(
+		'label'    => __( 'Layout', 'prismatic' ),
+		'description' => esc_html__( 'Select the layout used across the site.', 'prismatic' ),
+		'section'  => 'prismatic_theme_global_layout', // Replace with your own section ID
+		'settings' => 'prismatic_theme_global_layout',
+		'type'     => 'select',
+		'choices'  => array(
+			'wide' => __( 'Wide', 'prismatic' ),
+			'Full' => __( 'Full', 'prismatic' ),
+		),
+	) );
+
 	/// ----------------------------------------------------------------------------------------------------------------
 	///  Theme Header
 	/// ----------------------------------------------------------------------------------------------------------------

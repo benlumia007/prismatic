@@ -1,6 +1,13 @@
 .site-header {
 	padding: 0.5rem;
 
+	&.full {
+
+		.branding-navigation {
+			max-width: 100%;
+		}
+	}
+
 	.branding-navigation {
 		display: grid;
 		grid-template-columns: 1fr 1fr;

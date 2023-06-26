@@ -31,6 +31,10 @@ function prismatic_customize_settings( $manager ) {
 		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
+	$manager->add_setting( 'prismatic_theme_global_layout', array(
+		'default'           => 'wide',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
 
 
 	// Add a new setting
