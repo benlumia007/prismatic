@@ -86,19 +86,10 @@ function prismatic_custom_styles() {
 
 	if ( $menu_link ) {
 		$styles .= '
-			@media screen and ( min-width: 1071px ) {
-				.primary-menu .menu-items .menu-item a {
+			@media screen and ( min-width: 769px ) {
+				.primary-menu .menu-items .menu-item a,
+				.primary-menu .menu-items .menu-item.menu-item-has-children > a:after {
 					color: ' . $menu_link . ';
-				}
-
-				.primary-menu .menu-items .menu-item.menu-item-has-children a:after {
-					content: "";
-					display: inline-block;
-					border: solid ' . $menu_link . ';
-					border-width: 0 0.25rem 0.25rem 0;
-					transform: rotate(45deg);
-					padding: 0.2rem;
-					margin-left: 0.6rem;
 				}
 			}';
 	}

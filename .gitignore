@@ -1,6 +1,9 @@
 .idea
+assets/css
+assets/js
 node_modules
 vendor
 
+assets/mix-manifest.json
 composer.lock
 package-lock.json
