@@ -35,6 +35,9 @@ function prismatic_customize_controls( $manager ) {
 	///  Theme: Header
 	/// ----------------------------------------------------------------------------------------------------------------
 
+	$manager->get_control( 'custom_logo' )->description = esc_html__( 'Please make sure to resize your image to a height of 38px so that it fits properly.', 'prismatic' );
+	$manager->get_control( 'custom_logo' )->label = esc_html__( 'Site Logo', 'primsatic' );
+
 	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_border', [
 		'label'    => 'Header: Border',
 		'section'  => 'prismatic_theme_header_colors',
