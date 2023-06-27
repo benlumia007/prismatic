@@ -1,4 +1,15 @@
 .site-main {
+	a {
+		color: #0369a1;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+			text-underline-offset: 2px;
+		}
+	}
 
 	.loop {
 		.grid-items {

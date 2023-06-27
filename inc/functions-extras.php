@@ -52,6 +52,10 @@ function prismatic_custom_background() {
 		$style .= '.site-header .branding-navigation .site-branding .site-title a { color: #' . $header_text .  '}';
 	}
 
+	if ( ! display_header_text() ) {
+		$style .= '.site-header .branding-navigation .site-branding .site-title, .site-header .branding-navigation .site-branding .site-description { display: none }';
+	}
+
 	echo '<style>';
 	echo esc_html( $style );
 	echo '</style>';

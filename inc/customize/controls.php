@@ -14,12 +14,11 @@ add_action( 'customize_register', 'prismatic_customize_controls' );
 function prismatic_customize_controls( $manager ) {
 
 	/// ----------------------------------------------------------------------------------------------------------------
-	///  Theme Global
+	///  Theme: Global
 	/// ----------------------------------------------------------------------------------------------------------------
 
 	$manager->get_control( 'background_color' )->section = 'background_image';
 
-	// Register a control for the dropdown
 	$manager->add_control( 'prismatic_theme_global_layout', array(
 		'label'    => __( 'Layout', 'prismatic' ),
 		'description' => esc_html__( 'Select the layout used across the site.', 'prismatic' ),
@@ -33,63 +32,77 @@ function prismatic_customize_controls( $manager ) {
 	) );
 
 	/// ----------------------------------------------------------------------------------------------------------------
-	///  Theme Header
+	///  Theme: Header
 	/// ----------------------------------------------------------------------------------------------------------------
 
-	// Add a new control
-	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_border', array(
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_border', [
 		'label'    => 'Header: Border',
 		'section'  => 'prismatic_theme_header_colors',
 		'settings' => 'prismatic_theme_header_border',
 		'priority' => 5
-	) ) );
+	] ) );
 
-	// Add a new control
-	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_background', array(
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_background', [
 		'label'    => 'Header: Background',
 		'section'  => 'prismatic_theme_header_colors',
 		'settings' => 'prismatic_theme_header_background',
 		'priority' => 5
-	) ) );
+	] ) );
 
-	// Add a new control
-	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_site_description', array(
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_header_site_description', [
 		'label'    => 'Header: Site Description',
 		'section'  => 'prismatic_theme_header_colors',
 		'settings' => 'prismatic_theme_header_site_description',
 		'priority' => 15
-	) ) );
+	] ) );
 
+	/// ----------------------------------------------------------------------------------------------------------------
+	///  Theme: Content
+	/// ----------------------------------------------------------------------------------------------------------------
 
-	// Add a new control
-	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_border', array(
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_content_primary_color', [
+		'label'    => 'Primary: Text',
+		'section'  => 'prismatic_theme_content_colors',
+		'settings' => 'prismatic_theme_content_primary_color',
+	] ) );
+
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_content_primary_link_color', [
+		'label'    => 'Primary: Link',
+		'section'  => 'prismatic_theme_content_colors',
+		'settings' => 'prismatic_theme_content_primary_link_color',
+	] ) );
+
+	/// ----------------------------------------------------------------------------------------------------------------
+	///  Theme: Footer
+	/// ----------------------------------------------------------------------------------------------------------------
+
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_border', [
 		'label'    => 'Footer: Border',
 		'section'  => 'prismatic_theme_footer_colors',
 		'settings' => 'prismatic_theme_footer_border',
 		'priority' => 5
-	) ) );
-
+	] ) );
 
 	// Add a new control
-	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_background', array(
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_background', [
 		'label'    => 'Footer: Background',
 		'section'  => 'prismatic_theme_footer_colors',
 		'settings' => 'prismatic_theme_footer_background',
-	) ) );
+	] ) );
 
 	// Add a new control
-	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_text_color', array(
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_text_color', [
 		'label'    => 'Footer: Text',
 		'section'  => 'prismatic_theme_footer_colors',
 		'settings' => 'prismatic_theme_footer_text_color',
-	) ) );
+	] ) );
 
 	// Add a new control
-	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_text_link_color', array(
+	$manager->add_control( new WP_Customize_Color_Control( $manager, 'prismatic_theme_footer_text_link_color', [
 		'label'    => 'Footer: Link',
 		'section'  => 'prismatic_theme_footer_colors',
 		'settings' => 'prismatic_theme_footer_text_link_color',
-	) ) );
+	] ) );
 
 	$manager->add_control( 'prismatic_theme_footer_credit', [
 		'label' => esc_html__( 'Credit', 'prismatic' ),

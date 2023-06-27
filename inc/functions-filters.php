@@ -66,6 +66,8 @@ function prismatic_custom_styles() {
 	$footer_background = get_theme_mod( 'prismatic_theme_footer_background', 'ffffff' );
 	$footer_text = get_theme_mod( 'prismatic_theme_footer_text_color', 'ffffff' );
 	$footer_text_link = get_theme_mod( 'prismatic_theme_footer_text_link_color', '000000' );
+	$primary_text = get_theme_mod( 'prismatic_theme_content_primary_color', '000000' );
+	$primary_link_text = get_theme_mod( 'prismatic_theme_content_primary_link_color', '0369a1' );
 
 	$styles = '';
 
@@ -95,6 +97,14 @@ function prismatic_custom_styles() {
 
 	if ( $footer_text_link ) {
 		$styles .= '.site-footer .site-info a { color: ' . $footer_text_link . '}';
+	}
+
+	if ( $primary_link_text ) {
+		$styles .= '.site-main { color: ' . $primary_text . ' }';
+	}
+
+	if ( $primary_link_text ) {
+		$styles .= '.site-main a { color: ' . $primary_link_text . ' }';
 	}
 
 	if ( $styles ) {
