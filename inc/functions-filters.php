@@ -52,7 +52,7 @@ add_filter( 'excerpt_more', function() {
 		esc_url( get_permalink() ),
 		sprintf(
 		// Translators: %s is the post title for screen readers.
-			esc_html__( 'Continue reading&nbsp;%s&nbsp;&rarr;', 'exhale' ),
+			esc_html__( 'Continue reading&nbsp;%s&nbsp;&rarr;', 'prismatic' ),
 			the_title( '<span class="screen-reader-text">', '</span>', false )
 		)
 	);

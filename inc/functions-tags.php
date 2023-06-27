@@ -142,10 +142,10 @@ function prismatic_render_comments_link( array $args = [] ) {
 function sep( $sep = '' ) {
 
 	return apply_filters(
-		'exhale/sep',
+		'prismatic_sep',
 		sprintf(
 			' <span class="sep mx-2">%s</span> ',
-			$sep ?: esc_html_x( '&middot;', 'meta separator', 'exhale' )
+			$sep ?: esc_html_x( '&middot;', 'meta separator', 'prismatic' )
 		)
 	);
 }
